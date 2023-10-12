@@ -1,0 +1,21 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; /* Para centrar el formulario horizontalmente */
+}
+
+.form-container div {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+label {
+  width: 150px; /* Ancho deseado para las etiquetas */
+}
+
+input {
+  flex: 1;
+}

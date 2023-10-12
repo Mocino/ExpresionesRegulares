@@ -1,0 +1,38 @@
+<div class="container my-4">
+  <div class="card shadow border py-2 px-2">
+    <form [formGroup]="myForm">
+      <div class="custom-card">
+        <label for="dpi">DPI:</label>
+        <input type="text" id="dpi" formControlName="dpi">
+        <div *ngIf="myForm.get('dpi')?.valid && myForm.get('dpi')?.touched" class="alert alert-success">
+          DPI válido.
+        </div>
+        <div *ngIf="myForm.get('dpi')?.invalid && myForm.get('dpi')?.touched" class="alert alert-danger">
+          DPI no válido.
+        </div>
+      </div>
+
+      <div>
+        <label for="email">Correo Electrónico:</label>
+        <input type="text" id="email" formControlName="email">
+        <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched" class="alert alert-danger">
+          Correo Electrónico no válido.
+        </div>
+        <div *ngIf="myForm.get('email')?.valid && myForm.get('email')?.touched" class="alert alert-success">
+          Correo Electrónico válido.
+        </div>
+      </div>
+
+      <div>
+        <label for="phone">Teléfono:</label>
+        <input type="text" id="phone" formControlName="phone">
+        <div *ngIf="myForm.get('phone')?.invalid && myForm.get('phone')?.touched" class="alert alert-danger">
+          Teléfono no válido.
+        </div>
+        <div *ngIf="myForm.get('phone')?.valid && myForm.get('phone')?.touched" class="alert alert-success">
+          Teléfono válido.
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
