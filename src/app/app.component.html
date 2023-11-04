@@ -1,18 +1,9 @@
 <div class="container my-4">
   <div class="card shadow border py-2 px-2">
-    <form [formGroup]="myForm">
-      <div class="custom-card">
-        <label for="dpi">DPI:</label>
-        <input type="text" id="dpi" formControlName="dpi">
-        <div *ngIf="myForm.get('dpi')?.valid && myForm.get('dpi')?.touched" class="alert alert-success">
-          DPI válido.
-        </div>
-        <div *ngIf="myForm.get('dpi')?.invalid && myForm.get('dpi')?.touched" class="alert alert-danger">
-          DPI no válido.
-        </div>
-      </div>
 
-      <div>
+    <form [formGroup]="myForm">
+
+      <!-- <div>
         <label for="email">Correo Electrónico:</label>
         <input type="text" id="email" formControlName="email">
         <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched" class="alert alert-danger">
@@ -33,6 +24,35 @@
           Teléfono válido.
         </div>
       </div>
+
+-->
+      <div>
+        <label for="Expresion1">Expresion 1: - Example: A-12345678</label>
+        <input type="text" id="expresion1" formControlName="expresion1">
+        <div *ngIf="myForm.get('expresion1')?.invalid && myForm.get('expresion1')?.touched" class="alert alert-danger">
+          No válido.
+        </div>
+        <div *ngIf="myForm.get('expresion1')?.valid && myForm.get('expresion1')?.touched" class="alert alert-success">
+          válido.
+        </div>
+      </div>
+
+      <div>
+        <label for="Expresion2">Expresion 2: - Example: 823-000-0000</label>
+        <input type="text" id="expresion2" formControlName="expresion2">
+        <div *ngIf="myForm.get('expresion2')?.invalid && myForm.get('expresion2')?.touched" class="alert alert-danger">
+          No válido.
+        </div>
+        <div *ngIf="myForm.get('expresion2')?.valid && myForm.get('expresion2')?.touched" class="alert alert-success">
+          válido.
+        </div>
+      </div>
+
     </form>
   </div>
 </div>
+
+<pre>
+  {{myForm.value | json }}
+  </pre>
+
